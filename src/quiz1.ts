@@ -4,11 +4,34 @@ interface Records{
     
    
 }
+interface Incomes{
+    amount:number;
+}
 
-class Tracker implements Records{
+interface Expenses{
+    amount:number;
+}
+
+// class Tracker implements Records{
  
-  income:number;
+//   income:number;
+//   expense: number;
+
+//     constructor( private balance: number, income: number, expense: number){
+//         this.balance = balance
+//         this.income = income
+//         this.expense = expense
+//     }
+//     totalBalance():number {
+//         return this.balance
+//       }
+
+// }
+
+class Balance implements Records{
+    income:number;
   expense: number;
+  
 
     constructor( private balance: number, income: number, expense: number){
         this.balance = balance
@@ -16,13 +39,26 @@ class Tracker implements Records{
         this.expense = expense
     }
 
+    totalBalance():number {
+        return this.balance = this.income - this.expense
+         }
+
 
 }
 
-class Expense {
+class Expense implements Expenses{
+amount: number;
+constructor(amount:number){
+    this.amount = amount
+}
 
 }
 
-class Income{
-
+class Income implements Incomes{
+    amount: number;
+constructor(amount:number){
+    this.amount = amount
 }
+}
+
+
