@@ -32,7 +32,7 @@ class Department {
         return this.instance;
       }
       return (this.instance = new ItDepartment
-        ("IT25", ["Networking"]));
+        ("IT", ["Networking"]));
     }
   } 
   const network = ItDepartment
