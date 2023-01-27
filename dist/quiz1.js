@@ -1,16 +1,4 @@
 "use strict";
-// class Tracker implements Records{
-//   income:number;
-//   expense: number;
-//     constructor( private balance: number, income: number, expense: number){
-//         this.balance = balance
-//         this.income = income
-//         this.expense = expense
-//     }
-//     totalBalance():number {
-//         return this.balance
-//       }
-// }
 class Balance {
     constructor(balance, income, expense) {
         this.balance = balance;
@@ -31,4 +19,10 @@ class Income {
     constructor(amount) {
         this.amount = amount;
     }
+}
+const income = document.getElementById("income");
+const amount = document.getElementById("amount");
+const date = document.getElementById("date");
+let item = document.getElementById("citem");
+function showItems() {
 }

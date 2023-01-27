@@ -27,7 +27,7 @@ class Department {
     static getInstance() {
       if (ItDepartment
         .instance) {
-        // i.e. classname.variable
+       
         return this.instance;
       }
       return (this.instance = new ItDepartment

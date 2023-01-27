@@ -12,21 +12,6 @@ interface Expenses{
     amount:number;
 }
 
-// class Tracker implements Records{
- 
-//   income:number;
-//   expense: number;
-
-//     constructor( private balance: number, income: number, expense: number){
-//         this.balance = balance
-//         this.income = income
-//         this.expense = expense
-//     }
-//     totalBalance():number {
-//         return this.balance
-//       }
-
-// }
 
 class Balance implements Records{
     income:number;
@@ -62,3 +47,11 @@ constructor(amount:number){
 }
 
 
+const income = document.getElementById("income")! as HTMLInputElement
+const amount= document.getElementById("amount")! as HTMLInputElement
+const date = document.getElementById("date")! as HTMLInputElement
+let item = document.getElementById("item")! as HTMLDivElement
+
+function showItems(){
+    
+}
