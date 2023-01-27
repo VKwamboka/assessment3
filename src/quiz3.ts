@@ -20,7 +20,7 @@ class Department {
 
     // private constructor
     private constructor(id: string, admin: string[]) {
-      super(id, "Account");
+      super(id, "Network");
       this.admin = admin;
       this.id = id;
     } 
@@ -32,13 +32,13 @@ class Department {
         return this.instance;
       }
       return (this.instance = new ItDepartment
-        ("d25", ["Max"]));
+        ("IT25", ["Networking"]));
     }
-  } // So here only once instance is used - despite calling multiple times
-  const account = ItDepartment
+  } 
+  const network = ItDepartment
   .getInstance();
-  console.log(account);
-  const account2 = ItDepartment
+  console.log(network);
+  const computer = ItDepartment
   .getInstance();
-  console.log(account2);
+  console.log(computer);
   
