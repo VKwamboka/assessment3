@@ -10,10 +10,9 @@ class Department {
   } 
   
   // CHILD CLASS:
-  class ItDepartment
-   extends Department {
+  class ItDepartment extends Department {
     admin: string[];
-         // initialize a static variable  // Cannot be accessed from outside the class
+         // initialize a static variable  
 
     private static instance: ItDepartment;
 
