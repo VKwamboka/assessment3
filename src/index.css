@@ -79,7 +79,7 @@ justify-content: center;
     flex-direction: column;
     gap:10px;
   }
-  #item P{
+   P{
     color: green;
     font-size: 30px;
   }

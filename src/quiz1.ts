@@ -71,54 +71,7 @@ const Usage: Expense[] = [];
 
 btn.addEventListener("click", Tracker);
 
-// function showExpense() {
-//   item.innerHTML = "";
-//   const amount = amountValue.value;
-//   let singleExpense: Expense = amount;
-//   Usage.push(singleExpense);
-//   let totalexpenses = Usage.map(Number);
- 
-
-//   let sumtotalEx: number = 0;
-
-//   for (let i = 0; i < totalexpenses.length; i += 1) {
-//     sumtotalEx += totalexpenses[i];
-//   }
-
-//   let html = `
-//     <div class="income">
-//       <h1>${sumtotalEx}</h1>
-                   
-//     </div>`;
-
-//   item.innerHTML += html;
-
- 
-// }
- // showIncome
 const Salary: Income[] = [];
-
-// btn.addEventListener("click", showIncome);
-// function showIncome() {
-//   expensediv.innerHTML = "";
-//   const amountIncome = incomeValue.value;
-//   let singleIncome = amountIncome;
-//   Salary.push(singleIncome); 
-//   let totalincome = Salary.map(Number);
-//   // total income
-//   let sumtotalIn: number = 0;
-//   for (let i = 0; i < totalincome.length; i += 1) {
-//     sumtotalIn += totalincome[i];
-//   }
-
-//   let html = `
-//   <div class="income">
-//     <h1>${sumtotalIn}</h1>
-                 
-//   </div>`;
-
-//   expensediv.innerHTML += html;
-// }
 
 function Tracker(){
   // SHOW EXPENSE
