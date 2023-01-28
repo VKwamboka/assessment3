@@ -7,17 +7,10 @@ let amountValue = document.getElementById("amount");
 let incomeValue = document.getElementById("incomes");
 let expensediv = document.getElementById("expensediv");
 let balPlace = document.getElementById("bal");
+let incomVal = document.getElementById("incomVal");
 class Balance {
-    //static totalIncome:number;
     constructor() {
-        // income: number;
-        // expense: number;
-        // date: string;
         this.balance = 0;
-        // this.balance = balance;
-        // this.income = income;
-        // this.expense = expense;
-        // this.date = date;
     }
     getTotalBalance(income, expense) {
         return this.balance = income - expense;
@@ -26,20 +19,13 @@ class Balance {
 let vee = new Balance();
 console.log(vee.getTotalBalance(50, 4));
 class Expense {
-    // public totalExpenses:number = 0
-    // date: string;
     constructor(amount) {
         this.amount = amount;
-        // this.date = date;
     }
 }
 class Income {
-    // date: string;
-    // public totalIncome: number = 0;
     constructor(amountIncome) {
         this.amountIncome = amountIncome;
-        // this.date = date;
-        // this.addIncome(this.amount)
     }
 }
 const Usage = [];

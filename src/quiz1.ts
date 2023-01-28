@@ -6,6 +6,7 @@ let amountValue = document.getElementById("amount")! as HTMLFormElement;
 let incomeValue = document.getElementById("incomes")! as HTMLFormElement;
 let expensediv = document.getElementById("expensediv")! as HTMLFormElement;
 let balPlace = document.getElementById("bal")! as HTMLParagraphElement;
+let incomVal = document.getElementById("incomVal")! as HTMLParagraphElement;
 interface Records {
   income: number;
   expense: number;
@@ -13,28 +14,15 @@ interface Records {
 }
 interface Incomes {
   amountIncome: number;
-  // date?: string;
 }
 
 interface Expenses {
   amount: number;
-  // date: string;
 }
 
 class Balance  {
-  // income: number;
-  // expense: number;
-  // date: string;
   private balance: number = 0
-  //static totalIncome:number;
-
-  constructor( ) {
-    // this.balance = balance;
-    // this.income = income;
-    // this.expense = expense;
-    // this.date = date;
-  }
-
+  
   getTotalBalance(income:number, expense:number){
     return this.balance = income - expense
     
@@ -47,23 +35,15 @@ console.log(vee.getTotalBalance(50,4))
 
 class Expense implements Expenses {
   amount: number;
-  // public totalExpenses:number = 0
-  // date: string;
   constructor(amount: number) {
     this.amount = amount;
-    // this.date = date;
   }
 }
 
 class Income implements Incomes {
   amountIncome: number;
-  // date: string;
-  // public totalIncome: number = 0;
-
   constructor(amountIncome: number) {
     this.amountIncome = amountIncome;
-    // this.date = date;
-    // this.addIncome(this.amount)
   }
 }
 
