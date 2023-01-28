@@ -1,43 +1,32 @@
-// BASE CLASS
-class Department {
-    protected employee: string[] = [];
-    constructor(public name: string, protected id: string) {
-      this.name = name;
-    }
-    describe() {
-      console.log(`  DEPARTMENT: ${this.name} ID: ${this.id}     `);
-    }
-  } 
-  
-  // CHILD CLASS:
-  class ItDepartment extends Department {
-    admin: string[];
-         // initialize a static variable  
+class Department  {
+    name: string;
+    id: string
+           
 
-    private static instance: ItDepartment;
+    private static instance: Department;
 
 
     // private constructor
-    private constructor(id: string, admin: string[]) {
-      super(id, "Network");
-      this.admin = admin;
+    private constructor(id: string, name: string) {
+    
+      this.name = name;
       this.id = id;
     } 
-    // Always return the same instance
+    
     static getInstance() {
-      if (ItDepartment
+      if (Department
         .instance) {
        
         return this.instance;
       }
-      return (this.instance = new ItDepartment
-        ("IT", ["Networking"]));
+      return (this.instance = new Department
+        ("IT", "Networking"));
     }
   } 
-  const network = ItDepartment
+  const network = Department
   .getInstance();
   console.log(network);
-  const computer = ItDepartment
+  const computer = Department
   .getInstance();
   console.log(computer);
   
