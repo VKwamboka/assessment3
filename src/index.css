@@ -14,6 +14,7 @@
     width: 100%;
     margin: 50px;
     display: flex;
+    gap: 5px;
     /* background-color: blueviolet; */
 justify-content: center;
 /* align-items: center; */
@@ -28,26 +29,35 @@ justify-content: center;
   }
   .tracker{
     width: 40%;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
   #income, #expensediv{
-    width: 20%;
+    width: 15%;
     text-align: center;
+    border: 1px solid gray;
+    height: 300px;
+    border-radius: 10px;
   }
   .content1 {
     width: 100%;
     /* border: 2px solid pink; */
     gap: 10px;
     padding: 10px;
-    border: 1px solid gray;
+    
     border-radius: 10px;
     margin-top: 20px;
   }
   #item {
     margin-top: 20px;
-    display: flex;
+    /* display: flex;
     gap: 10px;
     justify-content: center;
-    width: 100%;
+    width: 100%; */
   }
   .item input {
     border: 2px solid black;
