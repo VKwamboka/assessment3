@@ -8,12 +8,13 @@ let incomeValue = document.getElementById("incomes");
 let expensediv = document.getElementById("expensediv");
 let balPlace = document.getElementById("bal");
 let incomVal = document.getElementById("incomVal");
+let allRecords = document.getElementById("allRecords");
 class Balance {
     constructor() {
         this.balance = 0;
     }
     getTotalBalance(income, expense) {
-        return this.balance = income - expense;
+        return (this.balance = income - expense);
     }
 }
 let vee = new Balance();
@@ -73,4 +74,7 @@ function Tracker() {
     let totalBal = bal.getTotalBalance(sumtotalIn, sumtotalEx);
     console.log(totalBal);
     balPlace.innerText = "$ " + " " + totalBal.toString();
+    // allRecords
+    allRecords.innerHTML = "";
+    let allRecord = [];
 }
