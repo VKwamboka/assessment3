@@ -6,6 +6,7 @@ let expense = document.getElementById("expense");
 let amountValue = document.getElementById("amount");
 let incomeValue = document.getElementById("incomes");
 let expensediv = document.getElementById("expensediv");
+let balPlace = document.getElementById("bal");
 class Balance {
     //static totalIncome:number;
     constructor() {
@@ -118,4 +119,5 @@ function Tracker() {
     let bal = new Balance();
     let totalBal = bal.getTotalBalance(sumtotalIn, sumtotalEx);
     console.log(totalBal);
+    balPlace.innerText = totalBal.toString();
 }

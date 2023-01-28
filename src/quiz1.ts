@@ -5,6 +5,7 @@ let expense = document.getElementById("expense")! as HTMLDivElement;
 let amountValue = document.getElementById("amount")! as HTMLFormElement;
 let incomeValue = document.getElementById("incomes")! as HTMLFormElement;
 let expensediv = document.getElementById("expensediv")! as HTMLFormElement;
+let balPlace = document.getElementById("bal")! as HTMLParagraphElement;
 interface Records {
   income: number;
   expense: number;
@@ -164,5 +165,6 @@ function Tracker(){
 let bal = new Balance()
 let totalBal = bal.getTotalBalance(sumtotalIn, sumtotalEx)
 console.log(totalBal)
+balPlace.innerText = totalBal.toString()
 
 }
