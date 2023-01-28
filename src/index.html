@@ -1,51 +1,59 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
 
-    <div class="container">
-        <div class="header">
-            <h1>EXPENSE TRACKER</h1>
-        </div>
-
-        <!-- <div class="content"> -->
-
-
-        <div class="content1" id="content1">
-            <h3>Enter Details</h3>
-            <div class="input">
-                <label>Income</label>
-                <input class="input" type="text" id="income">
-            </div>
-            <div class="input">
-                <label>Amount</label>
-                <input class="input" type="number" id="amount">
-            </div>
-            <div class="input">
-                <label>Date</label>
-                <input class="input" type="date" id="date">
+        <div class="container">
+            <div class="header">
+                <h1>EXPENSE TRACKER</h1>
             </div>
 
-            <button id="create-btn">Add new Item</button>
+
+            <div class="content">
+
+                <div id="income">
+                    <h2>Income</h2>
+
+                </div>
+
+                <div class="tracker">
+                    <!-- new items -->
+                    <div id="item">
+                        
+                    </div>
+
+                    <div class="content1" id="content1">
+                        <h3>Enter Details</h3>
+                        <div class="input">
+                            <label>Income</label>
+                            <input class="input" name="income" type="number" id="incomes">
+                        </div>
+                        <div class="input">
+                            <label>Amount</label>
+                            <input class="input" name="amount" type="number" id="amount">
+                        </div>
+                        <div class="input">
+                            <label>Date</label>
+                            <input class="input" name="date" type="date" id="date">
+                        </div>
+
+                        <button id="create-btn">Add new Item</button>
+                    </div>
+                </div>
+
+                <div id="expensediv">
+                    <h2>Expenses</h2>>
+                </div>
+            </div>
+
         </div>
 
-        <!-- new items -->
-        <div id="item">
 
-        </div>
-
-    
-        
-
-
-    </div>
-
-    
-    <script src="../dist/quiz1.js"></script> 
-</body>
+        <script src="../dist/quiz1.js"></script>
+    </body>
 </html>
