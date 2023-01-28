@@ -33,7 +33,7 @@ btn.addEventListener("click", Tracker);
 const Salary = [];
 function Tracker() {
     // SHOW EXPENSE
-    item.innerHTML = "";
+    expensediv.innerHTML = "";
     const amount = amountValue.value;
     let singleExpense = amount;
     Usage.push(singleExpense);
@@ -48,9 +48,9 @@ function Tracker() {
       <h1>${sumtotalEx}</h1>
                    
     </div>`;
-    item.innerHTML += html1;
+    expensediv.innerHTML += html1;
     // SHOW INCOME
-    expensediv.innerHTML = "";
+    item.innerHTML = "";
     const amountIncome = incomeValue.value;
     let singleIncome = amountIncome;
     Salary.push(singleIncome);
@@ -62,10 +62,11 @@ function Tracker() {
     }
     let html = `
   <div class="income">
-    <h1>${sumtotalIn}</h1>
+  <h2>Income<h2>
+    <p>${sumtotalIn}<p>
                  
   </div>`;
-    expensediv.innerHTML += html;
+    item.innerHTML += html;
     // Balance
     let bal = new Balance();
     let totalBal = bal.getTotalBalance(sumtotalIn, sumtotalEx);
