@@ -107,14 +107,16 @@ function Tracker() {
   let income = +incomeValue.value
   let tracker: string = ` 
     
-    <div class="expensem" style="display:flex;gap:10px;">
-        <p style="color:black;fontsize:12px;">$ ${expense}</p>
-        <p style="color:black;fontsize:12px;">${date}</p>
+    <div class="expensem" style="display:flex;gap:30px;">
+        <p style="color:black;font-size:18px;">$ ${expense}</p>
+        <p style="color:black;font-size:18px;"> Expenses</p>
+        <p style="color:black;font-size:18px;">${date}</p>
     </div>
     
-    <div class="incomem">
-    <p style="color:black;fontsize:12px;">$ ${income}</p>
-    <p style="color:black;fontsize:12px;">${date}</p>
+    <div class="incomem" style="display:flex;gap:30px;">
+    <p style="color:black;font-size:18px;">$ ${income}</p>
+    <p style="color:black;font-size:18px;"> Income</p>
+    <p style="color:black;font-size:18px;">${date}</p>
     </div>
     `
 
