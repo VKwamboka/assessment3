@@ -165,6 +165,7 @@ function Tracker(){
 let bal = new Balance()
 let totalBal = bal.getTotalBalance(sumtotalIn, sumtotalEx)
 console.log(totalBal)
+
 balPlace.innerText = totalBal.toString()
 
 }

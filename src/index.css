@@ -14,7 +14,7 @@
     width: 100%;
     margin: 50px;
     display: flex;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 justify-content: center;
 /* align-items: center; */
   }
@@ -73,28 +73,14 @@ justify-content: center;
     color: blueviolet;
     background-color: black;
   }
-  .completed {
-    width: 90%;
-    padding: 20px;
-    display: flex;
-    gap: 20%;
-    flex-wrap: wrap;
-  }
-  .todo {
-    width: 20%;
-    padding: 10px;
-    display: flex;
+
+  #item{
+    display:flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 20px;
-    border: 1px solid gray;
-    border-radius: 10px;
+    gap:10px;
   }
-  
-  .todo .btn button {
-    color: wheat;
-    background-color: blueviolet;
+  #item P{
+    color: green;
     font-size: 20px;
-    padding: 10px 20 px;
   }
   
