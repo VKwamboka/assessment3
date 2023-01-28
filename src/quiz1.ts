@@ -1,5 +1,5 @@
 const content1 = document.getElementById("content1")! as HTMLFormElement;
-let item = document.getElementById("item")! as HTMLDivElement;
+let item = document.getElementById("income")! as HTMLDivElement;
 const btn = document.getElementById("create-btn")! as HTMLButtonElement;
 let expense = document.getElementById("expense")! as HTMLDivElement;
 let amountValue = document.getElementById("amount")! as HTMLFormElement;
@@ -20,22 +20,29 @@ interface Expenses {
   // date: string;
 }
 
-// class Balance implements Records {
-//   static income: number;
-//   static expense: number;
-//   //static totalIncome:number;
+class Balance  {
+  // income: number;
+  // expense: number;
+  // date: string;
+  private balance: number = 0
+  //static totalIncome:number;
 
-//   constructor(private balance: number, income: number, expense: number) {
-//     this.balance = balance;
-//     //this.income = income;
-//     //this.expense = expense;
-//   }
+  constructor( ) {
+    // this.balance = balance;
+    // this.income = income;
+    // this.expense = expense;
+    // this.date = date;
+  }
 
-//   getTotalBalance(): number {
-//     return Balance.income - Balance.expense
-//   }
+  getTotalBalance(income:number, expense:number){
+    return this.balance = income - expense
+    
+  }
+ 
+}
+let vee = new Balance()
+console.log(vee.getTotalBalance(50,4))
 
-// }
 
 class Expense implements Expenses {
   amount: number;
@@ -45,8 +52,6 @@ class Expense implements Expenses {
     this.amount = amount;
     // this.date = date;
   }
-
-
 }
 
 class Income implements Incomes {
@@ -59,97 +64,105 @@ class Income implements Incomes {
     // this.date = date;
     // this.addIncome(this.amount)
   }
-
-  // addIncome(amount: number) {
-  //   this.totalIncome += amount;
-  //   // Balance.income += amount;
-  // }
 }
 
+const Usage: Expense[] = [];
 
-const Usage:Expense[]=[]
+btn.addEventListener("click", Tracker);
 
-btn.addEventListener("click", showExpense)
+// function showExpense() {
+//   item.innerHTML = "";
+//   const amount = amountValue.value;
+//   let singleExpense: Expense = amount;
+//   Usage.push(singleExpense);
+//   let totalexpenses = Usage.map(Number);
+ 
 
-function showExpense(){
-  item.innerHTML =""
-  const amount = amountValue.value
-  let singleExpense:Expense=amount
-  console.log(singleExpense)
-  Usage.push(singleExpense)
-  console.log(Usage)
+//   let sumtotalEx: number = 0;
 
-  let html = `
+//   for (let i = 0; i < totalexpenses.length; i += 1) {
+//     sumtotalEx += totalexpenses[i];
+//   }
+
+//   let html = `
+//     <div class="income">
+//       <h1>${sumtotalEx}</h1>
+                   
+//     </div>`;
+
+//   item.innerHTML += html;
+
+ 
+// }
+ // showIncome
+const Salary: Income[] = [];
+
+// btn.addEventListener("click", showIncome);
+// function showIncome() {
+//   expensediv.innerHTML = "";
+//   const amountIncome = incomeValue.value;
+//   let singleIncome = amountIncome;
+//   Salary.push(singleIncome); 
+//   let totalincome = Salary.map(Number);
+//   // total income
+//   let sumtotalIn: number = 0;
+//   for (let i = 0; i < totalincome.length; i += 1) {
+//     sumtotalIn += totalincome[i];
+//   }
+
+//   let html = `
+//   <div class="income">
+//     <h1>${sumtotalIn}</h1>
+                 
+//   </div>`;
+
+//   expensediv.innerHTML += html;
+// }
+
+function Tracker(){
+  // SHOW EXPENSE
+  item.innerHTML = "";
+  const amount = amountValue.value;
+  let singleExpense: Expense = amount;
+  Usage.push(singleExpense);
+  let totalexpenses = Usage.map(Number);
+  let sumtotalEx: number = 0;
+// total expenses
+  for (let i = 0; i < totalexpenses.length; i += 1) {
+    sumtotalEx += totalexpenses[i];
+  }
+
+  let html1 = `
     <div class="income">
-      <h1>${Usage}</h1>
+      <h1>${sumtotalEx}</h1>
                    
     </div>`;
 
-    item.innerHTML += html;
+  item.innerHTML += html1;
 
-}
-
-const Salary:Income[]=[]
-
-btn.addEventListener("click", showIncome)
-function showIncome(){
-  expensediv.innerHTML = ''
-  const amountIncome = incomeValue.value
-  let singleIncome=amountIncome
-  console.log(singleIncome)
-  Salary.push(singleIncome)
-  console.log(Salary)
-  console.log(incomeValue)
-  console.log(amountValue)
+// SHOW INCOME
+  expensediv.innerHTML = "";
+  const amountIncome = incomeValue.value;
+  let singleIncome = amountIncome;
+  Salary.push(singleIncome); 
+  let totalincome = Salary.map(Number);
+  // total income
+  let sumtotalIn: number = 0;
+  for (let i = 0; i < totalincome.length; i += 1) {
+    sumtotalIn += totalincome[i];
+  }
 
   let html = `
   <div class="income">
-    <h1>${Salary}</h1>
+    <h1>${sumtotalIn}</h1>
                  
   </div>`;
 
   expensediv.innerHTML += html;
+
+// Balance
+let bal = new Balance()
+let totalBal = bal.getTotalBalance(sumtotalIn, sumtotalEx)
+console.log(totalBal)
+
 }
-// function addIncomeRecord(){
-//   let amountInput = document.querySelector('#amounts') as HTMLInputElement;
-//   let date = document.querySelector('#date')?.nodeValue;
-//   let amount = amountInput.value
-
-//   const incomeRecord = new Income(amount, date)
-
-// }
-
-// function showIncome() {
-//   let income = new Income();
-
-//   content1.addEventListener("submit", (e) => {
-//     e.preventDefault();   
-
-//     let html = `
-//             <div class="income">
-//                     <h1>${income.amount}</h1>
-//                     <p>${income.date}</p>                
-//             </div>`;
-
-//     item.innerHTML += html;
-//   });
-// }
-
-// btn.addEventListener("click", showIncome);
-// showIncome();
-// function tracker(){
-//   // income
-//   const amountIncome = incomeValue.value
-//   let singleIncome:Income=amountIncome
-//   console.log(singleIncome)
-//   Salary.push(singleIncome)
-//   console.log(Salary)
-
-//   // EXPENSES
-//   const amount = amountValue.value
-//   let singleExpense:Expense=amount
-//   console.log(singleExpense)
-//   Usage.push(singleExpense)
-//   console.log(Usage)
-
-// }
