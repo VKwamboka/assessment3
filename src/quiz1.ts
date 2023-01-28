@@ -106,14 +106,14 @@ function Tracker() {
   let expense = +amountValue.value
   let income = +incomeValue.value
   let tracker: string = ` 
-  <div class="incomem" style="display:flex;gap:30px;">
+  <div class="incomem" style="display:flex;gap:40px;">
     <ion-icon name="add-outline" style="color:green;font-size:18px;"></ion-icon>
     <p style="color:black;font-size:18px;">$ ${income}</p>
     <p style="color:black;font-size:18px;"> Income</p>
     <p style="color:black;font-size:18px;">${date}</p>
   </div>
 
-    <div class="expensem" style="display:flex;gap:30px;">
+    <div class="expensem" style="display:flex;gap:40px;">
     <ion-icon name="remove-outline" style="color:red;font-size:18px;"></ion-icon>
         <p style="color:black;font-size:18px;">$ ${expense}</p>
         <p style="color:black;font-size:18px;"> Expenses</p>
