@@ -106,46 +106,19 @@ function Tracker() {
   let expense = +amountValue.value
   let income = +incomeValue.value
   let tracker: string = ` 
-    
-    <div class="expensem" style="display:flex;gap:30px;">
-        <p style="color:black;font-size:18px;">$ ${expense}</p>
-        <p style="color:black;font-size:18px;"> Expenses</p>
-        <p style="color:black;font-size:18px;">${date}</p>
-    </div>
-    
-    <div class="incomem" style="display:flex;gap:30px;">
+  <div class="incomem" style="display:flex;gap:30px;">
+    <ion-icon name="add-outline" style="color:green;font-size:18px;"></ion-icon>
     <p style="color:black;font-size:18px;">$ ${income}</p>
     <p style="color:black;font-size:18px;"> Income</p>
     <p style="color:black;font-size:18px;">${date}</p>
-    </div>
-    `
+  </div>
+
+    <div class="expensem" style="display:flex;gap:30px;">
+    <ion-icon name="remove-outline" style="color:red;font-size:18px;"></ion-icon>
+        <p style="color:black;font-size:18px;">$ ${expense}</p>
+        <p style="color:black;font-size:18px;"> Expenses</p>
+        <p style="color:black;font-size:18px;">${date}</p>
+    </div>`
 
   allRecords.insertAdjacentHTML("afterbegin", tracker)
-
-  // allRecords
-  // allRecords.innerHTML = ""
-  // let allRecord:Records[]=[]
-
- 
-
-  // let singleRecord:Records = {expense, income, date}
-  // allRecord.push(singleRecord)
-  // console.log(allRecord)
-
-  // allExpenses
-  // expenseTracker.insertAdjacentHTML('afterbegin', trackerTemplate);
-  // income.expenses.forEach(expense => {
-  // expenseContainer.innerHTML = `
-  // <h1>expense</h1>
-  // <div class="expense-list">
-  // <div class="expense-item">
-  // <div class="expense-item-description">
-  //     <h3>${expense.name}</h3>
-  // </div>
-  // <div class="expense-item-value">
-  //     <p>$ ${expense.amount}</p>
-  // </div>
-  // </div>
-  // </div>`
-  // })
 }

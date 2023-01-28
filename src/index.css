@@ -58,7 +58,6 @@ justify-content: center;
     gap: 10px;
     justify-content: center;
     width: 100%; */
-    fon
   }
   .item input {
     border: 2px solid black;
@@ -94,4 +93,7 @@ justify-content: center;
     color: green;
     font-size: 30px;
   }
+  /* ion-icon{
+    font-size: 20px;
+  } */
   
