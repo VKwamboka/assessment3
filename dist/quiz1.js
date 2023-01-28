@@ -44,8 +44,9 @@ function Tracker() {
         sumtotalEx += totalexpenses[i];
     }
     let html1 = `
-    <div class="income">
-      <h1>${sumtotalEx}</h1>
+    <div class="expense">
+    <h2>Expense</h2>
+      <p style="color:red;">$ ${sumtotalEx}<p>
                    
     </div>`;
     expensediv.innerHTML += html1;
@@ -62,8 +63,8 @@ function Tracker() {
     }
     let html = `
   <div class="income">
-  <h2>Income<h2>
-    <p>${sumtotalIn}<p>
+  <h2>Income</h2>
+    <p>$ ${sumtotalIn}<p>
                  
   </div>`;
     item.innerHTML += html;
@@ -71,5 +72,5 @@ function Tracker() {
     let bal = new Balance();
     let totalBal = bal.getTotalBalance(sumtotalIn, sumtotalEx);
     console.log(totalBal);
-    balPlace.innerText = totalBal.toString();
+    balPlace.innerText = "$ " + " " + totalBal.toString();
 }
