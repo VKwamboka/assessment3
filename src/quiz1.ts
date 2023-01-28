@@ -8,6 +8,7 @@ let expensediv = document.getElementById("expensediv")! as HTMLFormElement;
 let balPlace = document.getElementById("bal")! as HTMLParagraphElement;
 let incomVal = document.getElementById("incomVal")! as HTMLParagraphElement;
 let allRecords = document.getElementById("allRecords")! as HTMLDivElement;
+let dates  = document.getElementById("date")! as HTMLFormElement;
 
 interface Records {
   income: number;
@@ -55,8 +56,8 @@ const Salary: Income[] = [];
 function Tracker() {
   // SHOW EXPENSE
   expensediv.innerHTML = "";
-  const amount = amountValue.value;
-  let singleExpense: Expense = amount;
+  const amountExpense = amountValue.value;
+  let singleExpense: Expense = amountExpense;
   Usage.push(singleExpense);
   let totalexpenses = Usage.map(Number);
   let sumtotalEx: number = 0;
@@ -101,7 +102,48 @@ function Tracker() {
 
   balPlace.innerText = "$ " + " " + totalBal.toString();
 
+   let date = dates.value 
+  let expense = +amountValue.value
+  let income = +incomeValue.value
+  let tracker: string = ` 
+    
+    <div class="expensem" style="display:flex;gap:10px;">
+        <p style="color:black;fontsize:12px;">$ ${expense}</p>
+        <p style="color:black;fontsize:12px;">${date}</p>
+    </div>
+    
+    <div class="incomem">
+    <p style="color:black;fontsize:12px;">$ ${income}</p>
+    <p style="color:black;fontsize:12px;">${date}</p>
+    </div>
+    `
+
+  allRecords.insertAdjacentHTML("afterbegin", tracker)
+
   // allRecords
-  allRecords.innerHTML = ""
-  let allRecord:Records[]=[]
+  // allRecords.innerHTML = ""
+  // let allRecord:Records[]=[]
+
+ 
+
+  // let singleRecord:Records = {expense, income, date}
+  // allRecord.push(singleRecord)
+  // console.log(allRecord)
+
+  // allExpenses
+  // expenseTracker.insertAdjacentHTML('afterbegin', trackerTemplate);
+  // income.expenses.forEach(expense => {
+  // expenseContainer.innerHTML = `
+  // <h1>expense</h1>
+  // <div class="expense-list">
+  // <div class="expense-item">
+  // <div class="expense-item-description">
+  //     <h3>${expense.name}</h3>
+  // </div>
+  // <div class="expense-item-value">
+  //     <p>$ ${expense.amount}</p>
+  // </div>
+  // </div>
+  // </div>`
+  // })
 }
