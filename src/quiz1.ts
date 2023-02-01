@@ -58,7 +58,10 @@ function Tracker() {
   expensediv.innerHTML = "";
   const amountExpense = amountValue.value;
   let singleExpense: Expense = amountExpense;
+
+
   Usage.push(singleExpense);
+  
   let totalexpenses = Usage.map(Number);
   let sumtotalEx: number = 0;
   // total expenses
